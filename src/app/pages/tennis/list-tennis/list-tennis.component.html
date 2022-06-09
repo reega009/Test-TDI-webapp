@@ -1,0 +1,90 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-center" *ngIf="deuce">
+                    <h2 class="text-danger">...DEUCE...</h2>
+                </div>
+                <div class="container p-4 bg-dark">
+                    <div>
+                        <div class="row">
+                        <div class="col-2 bg-secondary text-white font-weight-bold" style="height:60px ; font-size: 40px; text-align: center;">
+                            PLAYER
+                        </div>
+                        <div class="col-2 bg-secondary text-white font-weight-bold" style="height:60px ; font-size: 40px; text-align: center;">
+                            SET 1
+                        </div>
+                        <div class="col-2 bg-secondary text-white font-weight-bold" style="height:60px ; font-size: 40px; text-align: center;">
+                            SET 2
+                        </div>
+                        <div class="col-2 bg-secondary text-white font-weight-bold" style="height:60px ; font-size: 40px; text-align: center;">
+                            SET 3
+                        </div>
+                        <div class="col-2 bg-secondary text-white font-weight-bold" style="height:60px ; font-size: 40px; text-align: center;">
+                            BALL
+                        </div>
+                        <div class="col-2 bg-secondary text-white font-weight-bold" style="height:60px ; font-size: 40px; text-align: center;">
+                            SCORE
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                        <div class="col-2 bg-secondary text-success font-weight-bold" style="height:100px ; font-size: 40px; text-align: center; font-family: 'Courier New', monospace; margin-top: 5px;">
+                            <label for="" style="margin-top:15px ;">{{listTennis.n_player_a}}</label>
+                        </div>
+                        <div class="col-2 bg-secondary text-warning font-weight-bold" style="height:100px ; font-size: 70px; text-align: center; font-family: 'Courier New', monospace; margin-top: 5px;">
+                            {{set1A}}
+                        </div>
+                        <div class="col-2 bg-secondary text-warning font-weight-bold" style="height:100px ; font-size: 70px; text-align: center; font-family: 'Courier New', monospace; margin-top: 5px;">
+                            {{set2A}}
+                        </div>
+                        <div class="col-2 bg-secondary text-warning font-weight-bold" style="height:100px ; font-size: 70px; text-align: center; font-family: 'Courier New', monospace; margin-top: 5px;">
+                            {{set3A}}
+                        </div>
+                        <div class="col-2 bg-secondary text-warning font-weight-bold" style="height:100px ; font-size: 50px; text-align: center; font-family: 'Courier New', monospace; margin-top: 5px;">
+                            <i class="fa-regular fa-circle" style="margin-top:22px;" *ngIf="ballA"></i>
+                        </div>
+                        <div class="col-2 bg-secondary text-danger font-weight-bold" style="height:100px ; font-size: 70px; text-align: center; font-family: 'Courier New', monospace; margin-top: 5px;">
+                            {{scoreSementaraA}}
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                        <div class="col-2 bg-secondary text-success font-weight-bold" style="height:100px ; font-size: 40px; text-align: center; font-family: 'Courier New', monospace; margin-top: 5px;">
+                            <label for="" style="margin-top:15px ;">{{listTennis.n_player_b}}</label>
+                        </div>
+                        <div class="col-2 bg-secondary text-warning font-weight-bold" style="height:100px ; font-size: 70px; text-align: center; font-family: 'Courier New', monospace; margin-top: 5px;">
+                            {{set1B}}
+                        </div>
+                        <div class="col-2 bg-secondary text-warning font-weight-bold" style="height:100px ; font-size: 70px; text-align: center; font-family: 'Courier New', monospace; margin-top: 5px;">
+                            {{set2B}}
+                        </div>
+                        <div class="col-2 bg-secondary text-warning font-weight-bold" style="height:100px ; font-size: 70px; text-align: center; font-family: 'Courier New', monospace; margin-top: 5px;">
+                            {{set3B}}
+                        </div>
+                        <div class="col-2 bg-secondary text-warning font-weight-bold" style="height:100px ; font-size: 50px; text-align: center; font-family: 'Courier New', monospace; margin-top: 5px;">
+                            <i class="fa-regular fa-circle" style="margin-top:22px ;" *ngIf="ballB"></i>
+                        </div>
+                        <div class="col-2 bg-secondary text-danger font-weight-bold" style="height:100px ; font-size: 70px; text-align: center; font-family: 'Courier New', monospace; margin-top: 5px;">
+                            {{scoreSementaraB}}
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-inline mt-5" style="margin-left : 600px; margin-top: 10px;">
+                    <div id="add" class="utils-button mx-3" >
+                        <button id="btn-add" type="button" style="width: 150px; height: 50px;" class="btn plus btn-primary" (click)="tambahPointA()" (click)="deuceSet()">
+                            Point Player A
+                        </button>
+                    </div>
+                    <div id="add" class="utils-button mx-3">
+                        <button id="btn-add" type="button" style="width: 150px; height: 50px;" class="btn plus btn-primary" (click)="tambahPointB()" (click)="deuceSet()">
+                            Point Player B
+                        </button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

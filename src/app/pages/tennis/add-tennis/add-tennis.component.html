@@ -1,0 +1,52 @@
+<div class="container">
+    <h1 class="mt-2 text-center">PERHITUNGAN SKOR PERMAINAN TENNIS</h1>
+    <div class="card mt-2">
+       <div class="card-header" style="background-color: #519259; color: white;">
+         {{ titlePage }}
+       </div>
+       <div class="card-body">
+        <div class="search-form form-group">
+            <form class="form" [formGroup]="formData">
+                <div class="form-label">
+                    <label class="form-label">Masukkan Nama Player A :</label>
+                    <input class="form-control" type="text" formControlName="n_player_a" placeholder="Nama Player A" [class.is-invalid]="formData.controls['n_player_a'].invalid">
+                </div>
+                <div class="form-label">
+                    <label class="form-label">Masukkan Nama Player B :</label>
+                    <input class="form-control" type="text" formControlName="n_player_b" placeholder="Nama Player B" [class.is-invalid]="formData.controls['n_player_b'].invalid">
+                </div>
+                <div id="save" class="utils-button mt-3">
+                    <button id="btn-save" class="btn save btn-success" type="submit" (click)="save()">
+                        <i class="fa fa-save"></i>
+                        &nbsp; Daftar
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="row mt-3">
+            <h1 class="my-3">Data Permainan Tennis</h1>
+            <table class="table table-hover table-bordered">
+                <thead class="thead-dark text-center">
+                    <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Nama Player A</th>
+                    <th scope="col">Nama Player B</th>
+                    <th scope="col">Skor Player A</th>
+                    <th scope="col">Skor Player B</th>
+                    </tr>
+                </thead>
+                <tbody class="table-light" *ngFor="let data of listTennis; let i = index ">
+                    <tr>
+                        <th scope="row" class="text-center">{{i+1}}</th>
+                        <td>{{data.n_player_a}}</td>
+                        <td>{{data.n_player_b}}</td>
+                        <td class="text-center">{{data.skor_player_a}}</td>
+                        <td class="text-center">{{data.skor_player_b}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+       </div>
+     </div>
+     
+ </div>
